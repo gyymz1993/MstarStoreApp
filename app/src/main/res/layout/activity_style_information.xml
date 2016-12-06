@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dip"
+        android:layout_marginTop="50dip"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_model_informa" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="@dimen/margin15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="2dip"
+                    android:gravity="center_vertical"
+                    android:text="类型"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_small" />
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_cus_store_type"
+                    style="@style/layout_horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_weight="1"
+                    app:tv_name="选择类型" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="@dimen/margin10"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dip"
+                    android:text="件数"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_small"
+                     />
+
+                <EditText
+                    android:id="@+id/id_cus_store_number"
+                    style="@style/layout_horizontal"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_while"
+                    android:button="@null"
+                    android:hint="件数"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:layout_width="40dip"
+                    android:layout_height="wrap_content"
+                    android:text="手 寸"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_small"
+                    />
+
+                <EditText
+                    android:id="@+id/id_cus_store_size"
+                    style="@style/layout_horizontal"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginRight="@dimen/margin5"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_while"
+                    android:button="@null"
+                    android:hint="手寸"
+                    android:inputType="number"
+                    android:text="1"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+
+            <com.qx.mstarstoreapp.viewutils.CustomLV
+                android:id="@+id/id_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin10"
+                android:divider="@color/white"
+                android:dividerHeight="@dimen/margin10" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dip"
+                android:layout_marginTop="@dimen/margin15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="50dip"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="2dip"
+                    android:text="备注"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_small" />
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_cus_store_remarkid"
+                    style="@style/layout_horizontal"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/margin5"
+                    android:layout_marginRight="@dimen/margin10"
+                    android:layout_weight="1"
+                    app:tv_name="选择备注" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dip"
+                android:layout_marginBottom="@dimen/margin5"
+                android:layout_marginTop="@dimen/margin15"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="备     注"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:visibility="invisible" />
+
+                <EditText
+                    android:id="@+id/id_tv_store_remarks"
+                    style="@style/layout_horizontal"
+                    android:layout_marginLeft="@dimen/margin10"
+                    android:layout_marginRight="@dimen/margin15"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_while"
+                    android:button="@null"
+                    android:textSize="10sp" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    .
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/id_tv_curorder"
+                style="@style/layout_horizontal"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/black" />
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:background="@color/color_line" />
+
+            <TextView
+                android:id="@+id/id_tv_add_order"
+                style="@style/layout_horizontal"
+                android:layout_weight="1"
+                android:background="@color/theme_red"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/progress_layout" />
+
+</RelativeLayout>

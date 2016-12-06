@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg"
+    android:orientation="vertical">
+
+    <include layout="@layout/seach_layout"></include>
+
+    <LinearLayout
+        android:id="@+id/id_rel1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_rel_title"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/id_cur_order"
+            style="@style/layout_horizontal"
+            android:layout_marginLeft="10dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="当前订单"
+            android:textColor="@color/black" />
+
+        <TextView
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="历史订单"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/id_tv_classify"
+            style="@style/layout_horizontal"
+            android:layout_marginRight="15dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="分类查询"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/id_rel2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_rel_title"
+        android:layout_marginBottom="@dimen/margin5"
+        android:layout_marginTop="@dimen/margin5"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/id_ly_all"
+            style="@style/layout_horizontal"
+
+            android:layout_marginLeft="15dip"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/text_size_small"
+                android:id="@+id/id_tv_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="全部"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/id_ig_nor"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dip"
+                android:src="@drawable/icon_list_nor" />
+        </LinearLayout>
+
+
+        <TextView
+            android:textSize="@dimen/text_size_small"
+            style="@style/layout_horizontal"
+            android:layout_marginLeft="@dimen/margin10"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="当前订单"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/id_his_order"
+            android:textSize="@dimen/text_size_small"
+            style="@style/layout_horizontal"
+            android:layout_marginLeft="@dimen/margin15"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="历史订单"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:textSize="@dimen/text_size_small"
+            android:onClick="opClassify"
+            android:id="@+id/id_classify"
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="分类"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/id_ly_filter"
+            style="@style/layout_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/text_size_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="筛选"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="3dip"
+                android:src="@drawable/icon_filter" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@+id/id_rel2"
+        android:layout_marginTop="8dp"
+        android:background="@color/color_line"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/id_rel3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/line1"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/id_gv_fileter"
+            style="@style/layout_wrap"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dip"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/text_size_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="男戒"
+                android:textColor="@color/black" />
+
+            <ImageView
+                android:id="@+id/id_ig_nor1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dip"
+                android:src="@drawable/icon_list_nor" />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/layout_wrap"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="25dip"
+            android:layout_marginTop="@dimen/margin10"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:textSize="@dimen/text_size_small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/margin10"
+                android:text="搜索关键字:"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:textSize="@dimen/text_size_small"
+                android:id="@+id/id_tv_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="2dip"
+                android:drawableRight="@drawable/icon_close"
+                android:drawablePadding="6dip"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:text="女戒"
+                android:maxWidth="55dp"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <com.qx.mstarstoreapp.viewutils.PullToRefreshView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/id_rel3"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+            <com.qx.mstarstoreapp.viewutils.GridViewWithHeaderAndFooter
+                android:id="@+id/id_gv_menu"
+                style="@style/layout_full"
+                android:layout_below="@+id/id_rel1"
+                android:horizontalSpacing="3dp"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="3dp" />
+
+    </com.qx.mstarstoreapp.viewutils.PullToRefreshView>
+
+        <RelativeLayout
+            android:id="@+id/lny_no_result"
+            android:background="@color/white"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/id_rel3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginBottom="5dp"
+                android:text="暂无数据展示"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            </RelativeLayout>
+
+
+
+</RelativeLayout>

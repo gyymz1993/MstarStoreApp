@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/title_layout"/>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/margin10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dip"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/id_order_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="订单编号：2013010000" />
+
+        <TextView
+            android:id="@+id/id_order_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="下单日期：2016-11-12" />
+
+        <TextView
+            android:id="@+id/id_update_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="修改日期：2016-11-12" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="状态：待审核" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <com.qx.mstarstoreapp.viewutils.PullToRefreshView
+        android:id="@+id/pull_refresh_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/id_rel_title"
+        android:layout_marginTop="1dp"
+        android:background="@color/theme_bg"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/id_pd_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10dp" />
+    </com.qx.mstarstoreapp.viewutils.PullToRefreshView>
+
+
+
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!---->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dip"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/id_tv_title"
+            android:layout_width="50dip"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="2dip"
+            android:layout_marginTop="3dip"
+            android:text="主  石"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_small" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/margin5"
+            android:layout_toRightOf="@id/id_tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_marginBottom="@dimen/margin5"
+                style="@style/layout_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_store_type"
+                    style="@style/layout_horizontal"
+                    android:layout_marginRight="3dip"
+                    android:layout_weight="1"
+                    app:tv_name="类型"
+                    app:tv_size="5sp" />
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_store_norm"
+                    style="@style/layout_horizontal"
+                    android:layout_marginRight="3dip"
+                    android:layout_weight="1"
+                    app:tv_name="规格"
+                    app:tv_size="5sp" />
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_store_shape"
+                    style="@style/layout_horizontal"
+                    android:layout_marginRight="3dip"
+                    android:layout_weight="1"
+                    app:tv_name="形状"
+                    app:tv_size="5sp" />
+
+
+                <EditText
+                    android:background="@drawable/btn_bg_while"
+                    android:button="@null"
+                    style="@style/layout_horizontal"
+                    android:layout_marginRight="7dip"
+                    android:layout_weight="0.5"
+                    android:textSize="10sp"
+                    android:hint="数量"
+                    android:inputType="number"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="@dimen/margin5"
+                style="@style/layout_vertical"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_store_color"
+                    style="@style/layout_horizontal"
+                    android:layout_marginRight="3dip"
+                    android:layout_weight="1"
+                    app:tv_name="颜色" />
+
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_store_cut"
+                    style="@style/layout_horizontal"
+                    android:layout_marginRight="3dip"
+                    android:layout_weight="1"
+                    app:tv_name="净度" />
+
+                <com.qx.mstarstoreapp.viewutils.CustomSelectButton
+                    android:id="@+id/id_store_price"
+                    style="@style/layout_horizontal"
+                    android:layout_marginRight="3dip"
+                    android:layout_weight="1"
+                    app:tv_size="5sp"
+                    app:tv_name="价格 ？"
+                    />
+
+                <TextView
+                    style="@style/layout_horizontal"
+                    android:layout_weight="0.5" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>
